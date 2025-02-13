@@ -1,8 +1,5 @@
-# poem_website
-A simple sample website to hold poems
+# online_shopping_example
 
-Anyone can create a user account, and anyone with a user account can add a poem.
-
-Right now, the only categories available for poems are love poems and general poems.
-
-Right now, each poem can only have five verses added, without going into the admin view.
+A simple sample website for online shopping
+All images taken from https://www.pexels.com/search/desktop%20backgrounds/
+where they are available for free
