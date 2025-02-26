@@ -19,6 +19,9 @@
         font-family: Arial, Helvetica;
         background-color: beige;
         }
+        /* Images are given an invisible border so they don't shift when moused over */
+        img {border: 5px solid beige}
+        /* Images and buttons highlight in blue when moused over */
         img:hover {border: 5px solid blue}
         button:hover {background-color: lightblue}
         input {margin:5px;}
@@ -30,17 +33,19 @@
 <body>
 
     <!-- Logo & Title -->
+    <!-- Inline CSS to override so the logo doesn't get a blue border like a sales image -->
     <div class="row align-items-center">
         <div class="col-md-2">
-            <img src="https://images.pexels.com/photos/954599/pexels-photo-954599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid">
+            <img src="https://images.pexels.com/photos/954599/pexels-photo-954599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" style="border:0px">
         </div>
         <div class="col-md-10 text-center">
             <h1>Desktop Background Shopping</h1>
         </div>
     </div>
-    <!-- We'll display 4 items in each row - 4 columns 3 wide -->
+    <!-- We'll display 4 items in each row - 4 columns each 3 wide -->
+    <!-- With 10 items that's 2 rows of 4 and 1 of 2 -->
     <hr>
-    <!-- 4 sales items -->
+    <!-- First row of 4 -->
     <div class="row">
         <div class="col-md-3 text-center">
             <img src="https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid">
@@ -63,7 +68,7 @@
             <p>$0.00 <button>Buy Now</button></p>
         </div>
     </div>
-    <!-- 4 sales items -->
+    <!-- Second row of 4 -->
     <div class="row">
         <div class="col-md-3 text-center">
             <img src="https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid">
@@ -86,7 +91,7 @@
             <p>$0.00 <button>Buy Now</button></p>
         </div>
     </div>
-    <!-- Last 2 sales items -->
+    <!-- Third row of 2 -->
     <div class="row">
         <div class="col-md-3 text-center">
             <img src="https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid">
@@ -105,20 +110,20 @@
     <footer>
         <div class="row align-items-center">
             <div class="col-md-2">
-                <img src="https://images.pexels.com/photos/954599/pexels-photo-954599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid">
+                <img src="https://images.pexels.com/photos/954599/pexels-photo-954599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" style="border:0px">
             </div>
-            <div class="col-md-2">
-                <label>Name:</label><br>
-                <label>Email Address:</label><br>
-                <label>Phone Number:</label>
-            </div>
-            <div class="col-md-8">
-                <!-- Response form - this is obviated by the much more straightforwards email link -->
-                <!-- Right now none of the inputs are verified - you can submit a blank form with no name or email attached -->
+            <!-- Submission form - unhappy with the layout but it works for now -->
+            <div class="col-md-10">
                 <form method="post">
-                    <input type="text"><br>
-                    <input type="email" size="30"><br>
-                    <input type="tel" size="14"><br>
+                    <label for="name">Name:</label>
+                    <input id="name" type="text"><br>
+
+                    <label for="email">Email Address:</label>
+                    <input id="email" type="email" size="30"><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" type="tel" size="14"><br>
+
                     <button type="submit">Submit</button>
                 </form>
             </div>
